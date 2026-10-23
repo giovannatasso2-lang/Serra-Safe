@@ -1,0 +1,12 @@
+{
+  "name": "Serra Safe",
+  "short_name": "Serra Safe",
+  "description": "Segurança dos visitantes e preservação ambiental da Serra do Japi.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4efe3",
+  "theme_color": "#1f4d34",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

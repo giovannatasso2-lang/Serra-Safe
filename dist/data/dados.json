@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "versao": "0.3-demo",
+    "atualizadoEm": "2026-10-21",
+    "descricao": "Base de dados do Serra Safe. Os itens marcados como fictícios existem só para demonstrar o aplicativo. Nenhuma coordenada, trilha, área restrita ou cabana desta base representa a Serra do Japi real.",
+    "georef": "relativo",
+    "ancora": {
+      "lat": -23.1857,
+      "lon": -46.8978,
+      "descricao": "Ponto de referência apenas para a demonstração (centro aproximado de Jundiaí). Não é a Serra do Japi."
+    },
+    "tiles": {
+      "ativo": false,
+      "url": "",
+      "minZoom": 12,
+      "maxZoom": 16,
+      "atribuicao": "",
+      "licenca": "Nenhuma fonte de mapa-base configurada. Use tiles próprios do projeto ou de um provedor cuja licença permita armazenamento offline."
+    }
+  },
+  "features": [
+    {"id":"ent-demo","tipo":"entrada","nome":"Entrada de exemplo","descricao":"Entrada fictícia usada na demonstração.","geom":{"type":"Point","m":[[0,0]]},"fonte":"Dado fictício do protótipo","verificadoEm":null,"verificacao":"ficticio","autorizacao":"ficticia","atualizadoEm":"2026-10-21"},
+    {"id":"info-demo","tipo":"informacao","nome":"Ponto de informação de exemplo","descricao":"Ponto de informação fictício.","geom":{"type":"Point","m":[[-35,-20]]},"fonte":"Dado fictício do protótipo","verificadoEm":null,"verificacao":"ficticio","autorizacao":"ficticia","atualizadoEm":"2026-10-21"},
+    {"id":"trilha-a","tipo":"trilha","nome":"Trilha Exemplo A","descricao":"Trilha fictícia de caminhada, usada para testar o mapa, o GPS e os alertas.","geom":{"type":"LineString","m":[[0,0],[60,70],[150,120],[260,210],[380,260],[470,380]]},"fonte":"Dado fictício do protótipo","verificadoEm":null,"verificacao":"ficticio","autorizacao":"ficticia","atualizadoEm":"2026-10-21",
+     "props":{"atividades":["Caminhada"],"bicicleta":false,"duracao":"2 h 30 min (exemplo)","dificuldade":"Moderada (exemplo)","terreno":"Exemplo: terra com raízes e subida contínua.","apoio":["apoio-1"]}},
+    {"id":"trilha-b","tipo":"trilha","nome":"Trilha Exemplo B","descricao":"Trilha fictícia que permite bicicleta, para mostrar como a atividade permitida aparece.","geom":{"type":"LineString","m":[[0,0],[120,-40],[300,-60],[480,-30],[640,40]]},"fonte":"Dado fictício do protótipo","verificadoEm":null,"verificacao":"ficticio","autorizacao":"ficticia","atualizadoEm":"2026-10-21",
+     "props":{"atividades":["Caminhada","Bicicleta"],"bicicleta":true,"duracao":"1 h 40 min de bicicleta (exemplo)","dificuldade":"Fácil (exemplo)","terreno":"Exemplo: estrada de terra larga e pouco inclinada.","apoio":["apoio-2"]}},
+    {"id":"trilha-c","tipo":"trilha","nome":"Trilha Exemplo C","descricao":"Rota fictícia sem autorização confirmada, para mostrar o aviso de rota não verificada.","geom":{"type":"LineString","m":[[470,380],[420,500],[300,560]]},"fonte":"Dado fictício do protótipo","verificadoEm":null,"verificacao":"pendente","autorizacao":"desconhecida","atualizadoEm":"2026-10-21",
+     "props":{"atividades":[],"bicicleta":null,"duracao":null,"dificuldade":null,"terreno":null,"apoio":[]}},
+    {"id":"area-1","tipo":"area_restrita","nome":"Área restrita de exemplo 1","descricao":"Área fictícia de nascente e vegetação sensível.","geom":{"type":"Polygon","m":[[[640,330],[622,388],[570,418],[510,402],[480,350],[498,292],[550,262],[610,278]]]},"fonte":"Dado fictício do protótipo","verificadoEm":null,"verificacao":"ficticio","autorizacao":"restrita","atualizadoEm":"2026-10-21",
+     "props":{"motivo":"Exemplo: nascente e vegetação sensível, onde o pisoteio causa erosão."}},
+    {"id":"area-2","tipo":"area_restrita","nome":"Área restrita de exemplo 2","descricao":"Área fictícia de refúgio da fauna.","geom":{"type":"Polygon","m":[[[-50,300],[-70,360],[-130,385],[-190,365],[-205,300],[-170,245],[-100,235]]]},"fonte":"Dado fictício do protótipo","verificadoEm":null,"verificacao":"ficticio","autorizacao":"restrita","atualizadoEm":"2026-10-21",
+     "props":{"motivo":"Exemplo: refúgio da fauna, onde a presença humana causa estresse aos animais."}},
+    {"id":"apoio-1","tipo":"apoio","nome":"Cabana proposta 1","descricao":"Cabana fictícia proposta pelo projeto. Não existe.","geom":{"type":"Point","m":[[260,215]]},"fonte":"Dado fictício do protótipo","verificadoEm":null,"verificacao":"ficticio","autorizacao":"nao_autorizada","atualizadoEm":"2026-10-21",
+     "props":{"situacao":"proposto","recursos":"Nenhum confirmado.","primeirosSocorros":"Não confirmado","comunicacao":"Não confirmado","rotas":["Trilha Exemplo A"],"orientacoes":"Não conte com esta cabana em emergências. Em caso de acidente, ligue para 192 ou 193."}},
+    {"id":"apoio-2","tipo":"apoio","nome":"Cabana proposta 2","descricao":"Cabana fictícia em avaliação ambiental. Não existe.","geom":{"type":"Point","m":[[480,-30]]},"fonte":"Dado fictício do protótipo","verificadoEm":null,"verificacao":"ficticio","autorizacao":"nao_autorizada","atualizadoEm":"2026-10-21",
+     "props":{"situacao":"avaliacao","recursos":"Nenhum confirmado.","primeirosSocorros":"Não confirmado","comunicacao":"Não confirmado","rotas":["Trilha Exemplo B"],"orientacoes":"Não conte com esta cabana em emergências. Em caso de acidente, ligue para 192 ou 193."}},
+    {"id":"atencao-1","tipo":"atencao","nome":"Trecho íngreme (exemplo)","descricao":"Exemplo de aviso: subida forte. Reduza o ritmo e use apoio.","geom":{"type":"Point","m":[[150,120]]},"fonte":"Dado fictício do protótipo","verificadoEm":null,"verificacao":"ficticio","autorizacao":"ficticia","atualizadoEm":"2026-10-21"},
+    {"id":"atencao-2","tipo":"atencao","nome":"Cruzamento (exemplo)","descricao":"Exemplo de aviso: bifurcação entre rotas. Confira a sinalização antes de seguir.","geom":{"type":"Point","m":[[470,380]]},"fonte":"Dado fictício do protótipo","verificadoEm":null,"verificacao":"ficticio","autorizacao":"ficticia","atualizadoEm":"2026-10-21"}
+  ],
+  "catalogo_trilhas": {
+    "titulo": "Trilhas de visitação monitorada citadas pela Prefeitura de Jundiaí",
+    "aviso": "Informação de 2022, sem traçado no mapa. A Prefeitura informou que a visitação é monitorada e exige agendamento. A fonte não informa se bicicletas são permitidas. Confirme tudo com os responsáveis oficiais antes de ir.",
+    "itens": [
+      {"id":"cat-mirante","nome":"Base Ecológica – Mirante","distancia":"6 km (ida e volta)","dificuldade":"Média"},
+      {"id":"cat-paraiso","nome":"Base Ecológica – Paraíso","distancia":"9,4 km (ida e volta)","dificuldade":"Média"},
+      {"id":"cat-morcegos","nome":"Base Ecológica – Córrego dos Morcegos","distancia":"8,41 km (ida e volta)","dificuldade":"Média"},
+      {"id":"cat-jabuticabeiras","nome":"Base Ecológica – Jabuticabeiras","distancia":"16 km (ida e volta)","dificuldade":"Alta"}
+    ],
+    "fonte": "Prefeitura de Jundiaí, notícia “Visitação monitorada à Serra do Japi retorna em março”",
+    "url": "https://jundiai.sp.gov.br/noticias/2022/02/18/visitacao-monitorada-a-serra-do-japi-retorna-em-marco/",
+    "dataFonte": "2022-02-18",
+    "verificacao": "verificado",
+    "verificadoEm": "2026-10-21"
+  },
+  "fatos_serra": [
+    {"t":"A Serra do Japi foi tombada pelo Condephaat em 1983.","fonte":"Prefeitura de Jundiaí, 07/03/2023","url":"https://jundiai.sp.gov.br/noticias/2023/03/07/tombamento-da-serra-do-japi-completa-40-anos/","dataFonte":"2023-03-07","verificacao":"verificado","verificadoEm":"2026-10-21"},
+    {"t":"A serra tem 354 km² e se estende por quatro municípios: Jundiaí, Pirapora do Bom Jesus, Cajamar e Cabreúva.","fonte":"Prefeitura de Jundiaí, 07/03/2023","url":"https://jundiai.sp.gov.br/noticias/2023/03/07/tombamento-da-serra-do-japi-completa-40-anos/","dataFonte":"2023-03-07","verificacao":"verificado","verificadoEm":"2026-10-21"},
+    {"t":"Em 1992 a Unesco a reconheceu como reserva da biosfera, segundo a Prefeitura de Jundiaí.","fonte":"Prefeitura de Jundiaí, 07/03/2023","url":"https://jundiai.sp.gov.br/noticias/2023/03/07/tombamento-da-serra-do-japi-completa-40-anos/","dataFonte":"2023-03-07","verificacao":"verificado","verificadoEm":"2026-10-21"},
+    {"t":"A Prefeitura a descreve como reserva biológica de fauna e flora remanescentes da Mata Atlântica.","fonte":"Prefeitura de Jundiaí, 07/03/2023","url":"https://jundiai.sp.gov.br/noticias/2023/03/07/tombamento-da-serra-do-japi-completa-40-anos/","dataFonte":"2023-03-07","verificacao":"verificado","verificadoEm":"2026-10-21"}
+  ],
+  "emergencia": {
+    "nacionais": [
+      {"numero":"192","nome":"SAMU (urgência médica)"},
+      {"numero":"193","nome":"Corpo de Bombeiros"},
+      {"numero":"190","nome":"Polícia Militar"},
+      {"numero":"199","nome":"Defesa Civil"},
+      {"numero":"153","nome":"Guarda Municipal de Jundiaí"}
+    ],
+    "fonte": "Prefeitura de Jundiaí, página “Telefones úteis”",
+    "url": "https://jundiai.sp.gov.br/telefones-uteis",
+    "verificacao": "verificado",
+    "verificadoEm": "2026-10-21",
+    "gestao": [
+      {"nome":"Programa de Visitas da Serra do Japi","tel":"(11) 4589-8415","email":"visitacaoserradojapi@jundiai.sp.gov.br","fonte":"Prefeitura de Jundiaí, notícia de 18/02/2022","dataFonte":"2022-02-18","verificacao":"pendente","nota":"Contato para visitas, não para emergências. Fonte de 2022: reconfirmar antes de divulgar."},
+      {"nome":"Fundação Serra do Japi","tel":"(11) 4817-8273","email":"fundacaoserradojapi@jundiai.sp.gov.br","fonte":"Prefeitura de Jundiaí, notícia de 18/02/2022","dataFonte":"2022-02-18","verificacao":"pendente","nota":"Citado para visitas de escolas e pesquisas, não para emergências. Fonte de 2022: reconfirmar antes de divulgar."}
+    ]
+  },
+  "educacao": {
+    "fonte_pendente": "Nomes científicos de referência geral. A presença na Serra do Japi ainda precisa ser confirmada na lista oficial da Fundação Serra do Japi.",
+    "fauna": [
+      {"id":"bugio","comum":"Bugio","cientifico":"Alouatta guariba","texto":"Primata da Mata Atlântica conhecido pelo ronco grave. É sensível à perda de floresta. Observe de longe e não ofereça comida.","foto":null,"verificacao":"pendente"},
+      {"id":"tucano","comum":"Tucano-de-bico-verde","cientifico":"Ramphastos dicolorus","texto":"Ave que come frutos e ajuda a dispersar sementes, o que mantém a floresta se renovando.","foto":null,"verificacao":"pendente"}
+    ],
+    "flora": [
+      {"id":"palmito","comum":"Palmito-juçara","cientifico":"Euterpe edulis","texto":"Palmeira nativa da Mata Atlântica, ameaçada pela extração ilegal do palmito. Seus frutos alimentam muitas aves e mamíferos.","foto":null,"verificacao":"pendente"},
+      {"id":"bromelia","comum":"Bromélias","cientifico":"Família Bromeliaceae","texto":"Plantas que acumulam água entre as folhas e servem de abrigo para pequenos animais. Não retire nem arranque.","foto":null,"verificacao":"pendente"}
+    ],
+    "curiosidades": [
+      "Aves que comem frutos, como o tucano, levam sementes para longe e ajudam a floresta a se renovar.",
+      "Bromélias guardam água entre as folhas e podem abrigar pequenos animais.",
+      "O ronco grave do bugio é usado para se comunicar e pode ser ouvido de longe.",
+      "A Serra do Japi tem 354 km² e passa por quatro municípios, segundo a Prefeitura de Jundiaí."
+    ],
+    "regras": {
+      "mata": "A Mata Atlântica é um dos biomas com maior diversidade de espécies do planeta, e restam fragmentos do que existia. Cada espécie cumpre um papel, e a perda de uma afeta as outras.",
+      "observar": ["Mantenha distância e fale baixo.","Não use flash nem persiga animais.","Nunca ofereça comida: isso muda a dieta e o comportamento deles.","Se o animal parecer ferido, não o manipule: avise os responsáveis oficiais."],
+      "proibido": ["Jogar lixo na trilha ou na mata.","Retirar plantas, flores, sementes ou pedras.","Sair das rotas autorizadas."]
+    },
+    "quiz": [
+      {"q":"O que você deve fazer ao encontrar um animal silvestre?","o":["Oferecer comida","Observar de longe, em silêncio","Tentar pegar para fotografar"],"c":1,"e":"Alimentar ou se aproximar altera o comportamento natural e pode causar acidentes."},
+      {"q":"Por que ficar na trilha autorizada é importante?","o":["Evita erosão e protege a vegetação e os animais","Só para não se sujar","Não há motivo"],"c":0,"e":"Sair da rota compacta o solo, danifica plantas e perturba a fauna."},
+      {"q":"O que fazer com o lixo, inclusive o orgânico?","o":["Enterrar na mata","Deixar para os animais","Levar de volta com você"],"c":2,"e":"Restos de comida e embalagens poluem e atraem animais para perto de pessoas."}
+    ]
+  },
+  "checklist": [
+    "Consultei as regras oficiais de visitação.",
+    "Confirmei se minha atividade é permitida na rota escolhida.",
+    "Baixei o mapa para uso offline.",
+    "Verifiquei a distância e a dificuldade da trilha.",
+    "Conferi a previsão do tempo por uma fonte atualizada, se houver internet.",
+    "Separei água e os itens necessários para a atividade.",
+    "Salvei os contatos oficiais de emergência.",
+    "Li as orientações de preservação ambiental."
+  ]
+}
